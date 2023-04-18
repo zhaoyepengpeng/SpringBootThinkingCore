@@ -11,6 +11,9 @@
 
     <groupId>org.springboot</groupId>
     <artifactId>SpringBoot1.0.x</artifactId>
+    <dependencies>
+
+    </dependencies>
 
 
 
