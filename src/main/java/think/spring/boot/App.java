@@ -2,6 +2,8 @@ package think.spring.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @className: App
@@ -10,26 +12,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  **/
 
 @SpringBootApplication
+@RestController
 public class App {
     /**
-     * 主要介绍不使用 spring-boot-starter-parent中的pom.xml文件，
-     * 使用自定义的pom.xml文件
-     * 主要通过在pom中配置实现,标签为  dependencyManagement
-     * <dependencyManagement>
-     * <dependencies>
-     * <dependency>
-     * <groupId>org.springframework.boot</groupId>
-     * <artifactId>spring-boot-dependencies</artifactId>
-     *次版本号若大于2.0.2.RELEASE，运行命令 mvn clean package 会报错
-     * <version>2.0.2.RELEASE</version>
-     * <version>2.0.2.RELEASE</version>
-     * <type>pom</type>
-     * <scope>import</scope>
-     * </dependency>
-     * </dependencies>
-     * </dependencyManagement>
+     * Spring Boot项目中的嵌入容器主要有三种，分别是：
+     * 01.Tomcat
+     * 02.Jetty
+     * 03.Undertow
+     * 主要介绍如何切换Spring Boot项目中的web 容器，
+     * 例如将web容器的Tomcat换成Jetty
+     * 即排除Tomcat依赖，添加Jetty依赖
      */
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
+    }
+    @RequestMapping("/index")
+    public String index(){
+        return "Success";
     }
 }
