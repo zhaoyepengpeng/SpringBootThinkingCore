@@ -23,6 +23,23 @@ public class App {
      *
      * 在页面访问/actuator   或者  /actuator/health  或者 /actuator/info 返回{} 由程序员定制（get方式）
      * http://127.0.0.1:8081/actuator/health 返回{"status":"UP"} 表示正常
+     *
+     * 访问访问/actuator返回数据
+     * {
+     * 	"_links": {
+     * 		"self": {
+     * 			"href": "http://127.0.0.1:8081/actuator",
+     * 			"templated": false
+     *                },
+     * 		"health": {
+     * 			"href": "http://127.0.0.1:8081/actuator/health",
+     * 			"templated": false
+     *        },
+     * 		"info": {
+     * 			"href": "http://127.0.0.1:8081/actuator/info",
+     * 			"templated": false
+     *        }* 	}
+     * }
      */
     public static void main(String[] args) {
         SpringApplication.run(App.class,args);
