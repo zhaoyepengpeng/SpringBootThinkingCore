@@ -7,6 +7,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.2.RELEASE</version>
+        <relativePath></relativePath>
     </parent>
     <groupId>org.springboot</groupId>
     <artifactId>SpringBootThinkingCore</artifactId>
@@ -20,9 +21,15 @@
     </properties>
 
     <dependencies>
+        <!--可以将应用作为web方式-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--01.添加 spring boot Actuator依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
 
