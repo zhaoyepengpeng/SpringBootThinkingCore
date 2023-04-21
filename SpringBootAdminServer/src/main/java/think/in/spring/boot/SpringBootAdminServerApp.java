@@ -1,5 +1,6 @@
 package think.in.spring.boot;
 
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,19 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @SpringBootApplication
-@RestController
-public class App {
+@EnableAdminServer
+public class SpringBootAdminServerApp {
    /**
     * spring boot admin 服务端测试
     * spring boot admin client端见a05SpringBootAdminClientTest分支
     *
     */
     public static void main(String[] args) {
-        SpringApplication.run(App.class,args);
+        SpringApplication.run(SpringBootAdminServerApp.class,args);
     }
 
-    @RequestMapping("/")
-    public String index() {
-        return "SUCCESS";
-    }
 }
