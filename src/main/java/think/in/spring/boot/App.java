@@ -21,7 +21,7 @@ public class App {
      * 01.添加依赖
      * 02.在配置文件中进行配置
      *
-     * 在页面访问/actuator   或者  /actuator/health  或者 /actuator/info（get方式）
+     * 在页面访问/actuator   或者  /actuator/health  或者 /actuator/info 返回{} 由程序员定制（get方式）
      * http://127.0.0.1:8081/actuator/health 返回{"status":"UP"} 表示正常
      */
     public static void main(String[] args) {
